@@ -84,8 +84,6 @@ function checkAnswer(event) {
 }
 
 function nextQuestion() {
-        console.log(score);
-        console.log(currentQuestionIndex);
     if (currentQuestionIndex < quizQuestions.length - 1) {
         currentQuestionIndex++;
         
