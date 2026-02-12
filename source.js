@@ -44,8 +44,7 @@ const quizQuestions = [
       { text: "Ag", correct: false },
     ],
   },
-];
-
+];,
 
 const questionElement = document.querySelector("h1.question");
 const answerButtonsElement = document.querySelector("ul.answers");
