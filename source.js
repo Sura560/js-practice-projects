@@ -59,6 +59,8 @@ const resultContainer = document.querySelector(".result-container");
 const finalScoreElement = document.querySelector(".final-score");
 const resetButton = document.querySelector(".restart-btn");
 
+const progressBar = document.querySelector(".progress-bar .bar");
+
 
 
 let currentQuestionIndex = 0;
@@ -128,6 +130,7 @@ function checkAnswer(event) {
 
 
 function nextQuestion() {
+    progressBar.style.width = `${((currentQuestionIndex) / quizQuestions.length) * 100}%`;
     if (currentQuestionIndex < quizQuestions.length - 1) {
         currentQuestionIndex++;
         
@@ -137,4 +140,5 @@ function nextQuestion() {
         resultContainer.classList.remove("hidden");
         finalScoreElement.textContent = `Your final score is ${score} out of ${quizQuestions.length}`;
     }
+    
 }
