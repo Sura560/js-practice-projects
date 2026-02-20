@@ -1,0 +1,58 @@
+/* A simple CSS reset using the universal selector */
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Makes layout calculations more intuitive by including padding and borders in the element's total width/height */
+  margin: 0;             /* Removes default browser margins */
+  padding: 0;            /* Removes default browser padding */
+}
+
+/* Optional: Additional simple resets for common inconsistencies */
+body {
+  line-height: 1.5;      /* Standardizes line height for better readability */
+  -webkit-text-size-adjust: none; /* Prevents font size inflation on mobile */
+  font-family: Arial, Helvetica, sans-serif;
+  text-size-adjust: none;
+   height: 100vh;
+   display: grid;
+   justify-content: center;
+   align-items: center;
+}
+
+img, picture, video, canvas, svg {
+  display: block;        /* Prevents extra space below images */
+  max-width: 100%;       /* Ensures images and media are responsive by default */
+}
+
+input, button, textarea, select {
+  font: inherit;         /* Form elements inherit font properties from their parent */
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word; /* Prevents long words from breaking the layout */
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    height: 50vh;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    margin-block-end: 1rem;
+}
+.column {
+    background-color: lightgray;
+    width: 20vw;
+    text-align: center;
+    border-radius: 10px;
+}
+.card {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+}
