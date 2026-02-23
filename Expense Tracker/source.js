@@ -63,3 +63,13 @@ function renderTransaction(transaction) {
     history.appendChild(transactionEl);
 }
 submitBtn.addEventListener('click', addTransaction);
+
+history.addEventListener('click', (e) => {
+    if (e.target.classList.contains('delete-btn')) {
+        const transactionId = e.target.getAttribute('data-id');
+        const transactionIndex = Transactions.findIndex(transaction => transaction.id === transactionId);
+        Transactions.splice(transactionIndex, 1);
+        localStorage.setItem('transactions', JSON.stringify(Transactions));
+        updateUI();
+    }
+});
