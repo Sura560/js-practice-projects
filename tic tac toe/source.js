@@ -1,7 +1,7 @@
 const bordEL = document.querySelector(".bord");
 const cellsEL = document.querySelectorAll(".cell");
 
-const board = Array(9).fill("");
+const board =  Array(9).fill("");
 const winningCombinations = [
   [0, 1, 2],
   [3, 4, 5],
@@ -16,7 +16,7 @@ const winningCombinations = [
 let currentPlayer = "X";
 let gameOver = false;
 
-// Reset function
+
 function resetBoard() {
   board.fill("");
   cellsEL.forEach(cell => (cell.textContent = ""));
@@ -31,11 +31,11 @@ function handleCellClick(e) {
     board[cellIndex] = currentPlayer;
     // Only update the clicked cell
     cellsEL[cellIndex].textContent = currentPlayer;
-
     const winner = checkWin();
     if (winner) {
       alert(winner);
       gameOver = true;
+      resetBoard();
       return;
     }
 
